@@ -17,7 +17,7 @@ class User(AbstractUser):
         (GENDER_FEMALE, "Female"),
     )
 
-    profilepic = models.ImageField(null=True, blank=True)
+    profilepic = models.ImageField(upload_to="profilepic", null=True, blank=True)
     gender = models.CharField(
         choices=GENDER_CHOICE, max_length=10, null=True, blank=True
         )

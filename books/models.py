@@ -18,7 +18,7 @@ class Book(TimeStampedModel):
     title = models.CharField(max_length=30)
     author = models.CharField(max_length=30)
     totalpages = models.IntegerField()
-    cover = models.ImageField()
+    cover = models.ImageField(upload_to="bookcover")
     description = models.TextField()
     pickreason = models.TextField()
     user = models.ForeignKey(
